@@ -1,0 +1,105 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    max-width: 1450px;
+    height: 76px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+    font-family:'DM Sans';
+
+    background: rgba(245, 248, 241, 0.13);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 5px 30px rgba(0,0,0,.08);
+    }
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  transition: .3s;
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+}
+
+.menu a:hover {
+  color: #c6dda9;
+}
+
+.menu li:hover .dropdown {
+  display: block;
+}
+
+.inicio{
+    height: 80vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(9,30,19,.76), rgba(9,30,19,.1)),
+    linear-gradient(0deg, rgba(9,30,19,.4), transparent 70%), url("inicio.jpg")center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.titulo{
+    margin-left: 200px;
+    width: 70vh;
+}
+
+.titulo h1{
+    font-size: 100px;
+    margin: 0;
+    font-family: 'Playfair Display';
+    color:white;
+}
+
+.textinho{
+    font-size: 18px;
+    font-family: 'montserrat';
+    color:#c6dda9;
+}
+.titulo p{
+    font-size: 20px;
+    color: white;
+    font-family: 'verdana';
+}
+
+.rodape{
+    background-color: #303c32;
+    width: 100%;
+    height: 20vh;
+}
+    
