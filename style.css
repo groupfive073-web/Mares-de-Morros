@@ -3,22 +3,25 @@ html{
 }
 body{
     margin: 0;
+    background-color: rgb(246, 255, 243);
 }
 
 .navbar {
     position: fixed;
-    top: 35px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     width: 94%;
     max-width: 1450px;
-    height: 60px;
+    height: 65px;
     padding: 0 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+
     font-family:'DM Sans';
+
     background: rgba(245, 248, 241, 0.13);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -31,6 +34,8 @@ body{
 .logo {
   font-size: 20px;
   font-weight: 700;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
 .menu {
@@ -47,8 +52,8 @@ body{
 .menu a {
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: .5px;
-  transition: .3s;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
   text-decoration: none;
   color:rgb(255, 255, 255);
 }
@@ -64,8 +69,8 @@ body{
 .inicio{
     height: 80vh;
     width: 100%;
-    background: linear-gradient(90deg, rgba(9,30,19,.76), rgba(9,30,19,.1)),
-    linear-gradient(0deg, rgba(9,30,19,.4), transparent 70%), url("inicio.jpg") center / cover no-repeat;
+    background: linear-gradient(90deg, rgba(9, 30, 19, 0.76), rgba(9,30,19,.1)),
+    linear-gradient(0deg, rgba(9,30,19,.4), transparent 70%), url("inicio.jpg")center / cover no-repeat;
     display: flex;
     align-items: center;
 }
@@ -79,7 +84,7 @@ body{
     font-size: 100px;
     margin: 0;
     font-family: 'Playfair Display';
-    color: white;
+    color:white;
     line-height: 1;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -94,6 +99,81 @@ body{
     font-size: 20px;
     color: white;
     font-family: 'verdana';
+}
+
+.curiosidades{
+  background-color: rgb(246, 255, 243);
+  height: 200px;
+  width: 1400px;
+  border-radius: 40px;
+  margin: -50px auto 50px;
+  padding: 0 30px 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 0px 10px 100px -30px #303c32;
+}
+.topicos h1{
+  font-size: 47px;
+  margin: 0;
+  font-family: 'montserrat';
+  color:#303c32
+
+}
+.topicos p{
+  font-size: 17px;
+  font-family: 'DM Sans';
+  color:#7f916a;
+  margin: 2px;
+}
+
+.tudo{
+  margin: 100px 200px 0 200px;
+}
+
+.textinho2{
+    font-size: 18px;
+    font-family: 'montserrat';
+    color:#7f916a;
+    margin: 0;
+}
+
+.introducao{
+  display:flex;
+  align-items: column;
+  gap: 50px;
+  margin: 0 0 100px;
+}
+
+.introducao img{
+  margin-right: 0;
+  margin-left: auto;
+  border-radius: 15px;
+  width: 1000px;
+}
+
+.introducao hr{
+  width: 50px;
+  margin-left: 0;
+  height: 3px;
+  border: none;
+  background-color: #c6dda9;
+}
+
+.introducao h1{
+  font-size: 50px;
+  color:#303c32;
+  margin: 0;
+  font-family: 'DM Sans';
+}
+
+.p{
+  font-size: 18px;
+  color:#303c32;
+  font-family: 'DM Sans';
+  text-align: justify;
 }
 
 .rodape{
