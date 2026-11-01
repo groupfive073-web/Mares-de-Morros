@@ -127,6 +127,13 @@ body{
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.topo:hover{
+  transform: scale(1.1);
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px #404935;
 }
 
 .curiosidades{
@@ -173,7 +180,7 @@ body{
   display:flex;
   align-items: column;
   gap: 50px;
-  margin: 0 0 100px;
+  margin: 60px;
 }
 
 .introducao img{
@@ -181,6 +188,7 @@ body{
   margin-left: auto;
   border-radius: 15px;
   width: 750px;
+  object-fit: cover;
 }
 
 .introducao hr{
@@ -214,7 +222,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
-  margin-bottom: 50px;
+  margin:120px 0 50px 0;
 }
 
 .topicos2{
@@ -287,7 +295,7 @@ body{
 }
 
 .conteudo h1{
-  margin: 10PX 0 0 0;
+  margin: 10px 0 0 0;
   font-family: 'montserrat';
   font-size: 27px;
   color:#303c32
@@ -333,9 +341,200 @@ body{
 }
 
 
+.carrossel{
+  position: relative;
+  width: 100%;
+  margin: 0 0 150px;
+}
+
+.carrossel input{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none; /* deixa nao clicável */
+}
+
+.limite{
+  position: relative;
+  height: 610px;
+  overflow: hidden;
+}
+
+.slides{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -550px;
+
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  height: 100%;
+  transform: translateX(-1128px);
+  transition: transform 0.6s;
+}
+
+.slide{
+  flex: 0 0 1100px;
+  height: 100%;
+  text-align: left;
+  opacity: 0.38;
+  transition: 0.5s;
+}
+
+.slide img{
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.descricao{
+  padding: 20px 10px 10px 10px;
+}
+
+.descricao h1{
+  font-family: 'montserrat';
+  font-size: 27px;
+  color:#303c32;
+  margin: 0;
+}
+
+.carrossel:has(#s1:checked) .slide:nth-child(1),
+.carrossel:has(#s2:checked) .slide:nth-child(2),
+.carrossel:has(#s3:checked) .slide:nth-child(3),
+.carrossel:has(#s4:checked) .slide:nth-child(4),
+.carrossel:has(#s5:checked) .slide:nth-child(5){
+  opacity: 1;
+}
+
+/* A cada movimento o slide vai passar a largura do slide + o espaço entre eles (1100px+28px) pra esquerda (negativo) */
+.carrossel:has(#s1:checked) .slides{
+  transform: translateX(0);
+}
+.carrossel:has(#s2:checked) .slides{
+  transform: translateX(-1128px);
+}
+.carrossel:has(#s3:checked) .slides{
+  transform: translateX(calc(2*(-1128px)));
+}
+.carrossel:has(#s4:checked) .slides{
+  transform: translateX(calc(3*(-1128px)));
+}
+.carrossel:has(#s5:checked) .slides{
+  transform: translateX(calc(4*(-1128px)));
+}
+
+.setinhas{
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa os elementos em distancias iguais, da borda extrema direita até a borda extrema esquerda*/
+  width: 100%;
+  height: 440px;
+  pointer-events: none;
+}
+
+.seta{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #303c32;
+  color: #c6dda9;
+  font-size: 30px;
+  line-height: 1;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.carrossel:has(#s1:checked) .direita1,
+.carrossel:has(#s1:checked) .esquerda1,
+.carrossel:has(#s2:checked) .direita2,
+.carrossel:has(#s2:checked) .esquerda2,
+.carrossel:has(#s3:checked) .direita3,
+.carrossel:has(#s3:checked) .esquerda3,
+.carrossel:has(#s4:checked) .direita4,
+.carrossel:has(#s4:checked) .esquerda4,
+.carrossel:has(#s5:checked) .direita5,
+.carrossel:has(#s5:checked) .esquerda5{
+  display: flex;
+}
+
+.joguinho{
+  background-image:url(fundo.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 470px;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  color:rgb(246, 255, 243);
+  text-align: center;
+}
+
+.joguinho h1{
+  font-family: 'montserrat';
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+}
+
+.joguinho p{
+  color:rgb(246, 255, 243);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.joguinhoo{
+  width: 50%;
+}
+
+.joguinho button{
+  background: linear-gradient(135deg, #335a43, #263e2d);;
+  font-family: 'montserrat';
+  color:rgb(246, 255, 243);
+  border-radius: 25px;
+  width: 130px;
+  height: 50px;
+  border: none;
+  margin-top: 30px;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.joguinho button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px #335a43;
+  transform: scale(1.05);
+}
+
+.joguinho .textinho{
+  color:#c6dda9;
+}
+
 .rodape{
     background-color: #303c32;
     width: 100%;
     height: 20vh;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+.rodape div{
+  margin: 0 200px 0 200px;
 }
     
