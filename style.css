@@ -4,11 +4,11 @@ html{
 }
 
 :target {
-  scroll-margin-top: 120px; /* aplica espaçamento antes da ancora*/
+    scroll-margin-top: 120px; /* aplica espaçamento antes da ancora*/
 }
 
 #caracteristicas {
-  scroll-margin-top: 70px;
+    scroll-margin-top: 70px;
 }
 
 body{
@@ -42,38 +42,38 @@ body{
     }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
 }
 
 .menu li {
-  position: relative;
+    position: relative;
 }
 
 .menu a {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: 0.3s;
-  text-decoration: none;
-  color:rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
 }
 
 .menu a:hover {
-  color: #c6dda9;
+    color: #c6dda9;
 }
 
 .menu li:hover .dropdown {
-  display: block;
+    display: block;
 }
 
 .inicio{
